@@ -20,27 +20,29 @@
 #配列の初期化に注意すること https://note.nkmk.me/python-list-initialize/
 
 #悪い例
-ans1_bad = [[0] * 9] * 9
-for i in range(9):
-  for j in range(9):
-    #print((i+1) * (j+1))
-    ans1_bad[i][j] = (i+1) * (j+1)
-    #print(ans2_bad)
-print(ans1_bad)
+ans1_bad = [ [0] * 9 ] * 9
+# print(ans1_bad)
+# for i in range(9):
+#   for j in range(9):
+#     print((i+1) * (j+1))
+#     ans1_bad[i][j] = (i+1) * (j+1)
+#     print(ans1_bad)
+# print(ans1_bad)
 
 #良い例
-ans1_ok = [[0] * 9 for i in range(9)]
+ans1_ok = [  [0] * 9 for i in range(9)  ]
+print(ans1_ok)
 for i in range(9):
   for j in range(9):
-    #print((i+1) * (j+1))
+    # print((i+1) * (j+1))
     ans1_ok[i][j] = (i+1) * (j+1)
-    #print(ans2)
+    # print(ans1_ok)
 print(ans1_ok)
 
 
 
-#回答例２
-#方針：1*81の１次元配列を作りnumpyのreshapeメソッドを使って２次元に変換
+# #回答例２
+# #方針：1*81の１次元配列を作りnumpyのreshapeメソッドを使って２次元に変換
 import numpy as np
 
 ans2 = []
